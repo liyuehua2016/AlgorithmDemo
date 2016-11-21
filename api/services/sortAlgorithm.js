@@ -74,6 +74,7 @@ module.exports = {
   },
 
 
+  // O(NlogN)
   HeapSort: function (_data) {
     //空数组或只有一个元素的数组,直接返回。
     if (_data && _data.length <= 1) {
@@ -107,7 +108,7 @@ module.exports = {
           }
           index--;
         }
-        
+
         while(index>0){
           var subtree_biggerIndex=utils.biggerNumIndex(_data,index, index-1);
           var parent_index=index/2-1;
@@ -131,10 +132,12 @@ module.exports = {
       return _data;
     }
 
+  },
 
+
+  MergeSort: function(_data1,_data2){
 
   }
-
 
 
 
